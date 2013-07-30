@@ -130,7 +130,7 @@ Dimi looks up DJ P0N-3's vote stats:
 
 #How to compile and run
 ------------------------------
-To compile the bot, you will need to install [Node.JS](http://nodejs.org/) and then `npm install coffeescript`.
+To compile the bot, you will need to install [Node.JS](http://nodejs.org/) and then `npm install coffee-script`.
 
 When you have coffeescript installed on your system, just open up a terminal/command prompt window, CD to your bot file main directory, and type `cake build`.  Examples:
 
