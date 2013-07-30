@@ -202,8 +202,8 @@ populateUserData = ->
 initEnvironment = ->
 	document.getElementById("button-vote-positive").click()
 	document.getElementById("button-sound").click()
-	Playback.streamDisabled = true
-	Playback.stop()
+	# Playback.streamDisabled = true
+	# Playback.stop()
 
 initialize = ->
   pupOnline()
@@ -399,7 +399,7 @@ class cookieCommand extends Command
 
 class newSongsCommand extends Command
 	init: ->
-		@command='/newsongs'
+		@command='!newsongs'
 		@parseType='startsWith'
 		@rankPrivelege='user'
 
@@ -509,7 +509,7 @@ class newSongsCommand extends Command
 
 class whyWootCommand extends Command
 	init: ->
-		@command='/whywoot'
+		@command='!whywoot'
 		@parseType='startsWith'
 		@rankPrivelege='user'
 
@@ -525,7 +525,7 @@ class whyWootCommand extends Command
 
 class themeCommand extends Command
 	init: ->
-		@command='/theme'
+		@command='!theme'
 		@parseType='startsWith'
 		@rankPrivelege='user'
 
@@ -537,7 +537,7 @@ class themeCommand extends Command
 
 class rulesCommand extends Command
 	init: ->
-		@command='/rules'
+		@command='!rules'
 		@parseType='startsWith'
 		@rankPrivelege='user'
 
@@ -551,7 +551,7 @@ class rulesCommand extends Command
 
 class roomHelpCommand extends Command
 	init: ->
-		@command='/roomhelp'
+		@command='!roomhelp'
 		@parseType='startsWith'
 		@rankPrivelege='user'
 
@@ -578,7 +578,7 @@ class sourceCommand extends Command
 
 class wootCommand extends Command
 	init: ->
-		@command='/woot'
+		@command='!woot'
 		@parseType='startsWith'
 		@rankPrivelege='user'
 
@@ -601,7 +601,7 @@ class badQualityCommand extends Command
 
 class downloadCommand extends Command
 	init: ->
-		@command='/download'
+		@command='!download'
 		@parseType='exact'
 		@rankPrivelege='user'
 
@@ -620,7 +620,7 @@ class downloadCommand extends Command
 
 class afksCommand extends Command
 	init: ->
-		@command='/afks'
+		@command='!afks'
 		@parseType='exact'
 		@rankPrivelege='user'
 
@@ -643,7 +643,7 @@ class afksCommand extends Command
 
 class allAfksCommand extends Command
 	init: ->
-		@command='/allafks'
+		@command='!allafks'
 		@parseType='exact'
 		@rankPrivelege='user'
 
@@ -666,7 +666,7 @@ class allAfksCommand extends Command
 
 class statusCommand extends Command
 	init: ->
-		@command='/status'
+		@command='!status'
 		@parseType='exact'
 		@rankPrivelege='user'
 
@@ -691,7 +691,7 @@ class statusCommand extends Command
 
 class unhookCommand extends Command
 	init: ->
-		@command='/unhook events all'
+		@command='!unhook events all'
 		@parseType='exact'
 		@rankPrivelege='host'
 
@@ -703,7 +703,7 @@ class unhookCommand extends Command
 
 class dieCommand extends Command
 	init: ->
-		@command='/die'
+		@command='!die'
 		@parseType='exact'
 		@rankPrivelege='host'
 
@@ -717,7 +717,7 @@ class dieCommand extends Command
 
 class reloadCommand extends Command
 	init: ->
-		@command='/reload'
+		@command='!reload'
 		@parseType='exact'
 		@rankPrivelege='host'
 
@@ -730,7 +730,7 @@ class reloadCommand extends Command
 
 class lockCommand extends Command
 	init: ->
-		@command='/lock'
+		@command='!lock'
 		@parseType='exact'
 		@rankPrivelege='mod'
 
@@ -741,7 +741,7 @@ class lockCommand extends Command
 
 class unlockCommand extends Command
 	init: ->
-		@command='/unlock'
+		@command='!unlock'
 		@parseType='exact'
 		@rankPrivelege='mod'
 
@@ -752,7 +752,7 @@ class unlockCommand extends Command
 
 class swapCommand extends Command
 	init: ->
-		@command='/swap'
+		@command='!swap'
 		@parseType='startsWith'
 		@rankPrivelege='mod'
 
@@ -784,7 +784,7 @@ class swapCommand extends Command
 
 class popCommand extends Command
 	init: ->
-		@command='/pop'
+		@command='!pop'
 		@parseType='exact'
 		@rankPrivelege='mod'
 
@@ -795,7 +795,7 @@ class popCommand extends Command
 
 class pushCommand extends Command
 	init: ->
-		@command='/push'
+		@command='!push'
 		@parseType='startsWith'
 		@rankPrivelege='mod'
 
@@ -810,7 +810,7 @@ class pushCommand extends Command
 
 class resetAfkCommand extends Command
 	init: ->
-		@command='/resetafk'
+		@command='!resetafk'
 		@parseType='startsWith'
 		@rankPrivelege='mod'
 
@@ -830,7 +830,7 @@ class resetAfkCommand extends Command
 
 class forceSkipCommand extends Command
 	init: ->
-		@command='/forceskip'
+		@command='!forceskip'
 		@parseType='startsWith'
 		@rankPrivelege='mod'
 
@@ -848,7 +848,7 @@ class forceSkipCommand extends Command
 
 class overplayedCommand extends Command
 	init: ->
-		@command='/overplayed'
+		@command='!overplayed'
 		@parseType='exact'
 		@rankPrivelege='user'
 
@@ -871,7 +871,7 @@ class uservoiceCommand extends Command
 
 class skipCommand extends Command
 	init: ->
-		@command='/skip'
+		@command='!skip'
 		@parseType='exact'
 		@rankPrivelege='mod'
 
@@ -882,7 +882,7 @@ class skipCommand extends Command
 
 class whyMehCommand extends Command
 	init: ->
-		@command='/whymeh'
+		@command='!whymeh'
 		@parseType='exact'
 		@rankPrivelege='user'
 
@@ -893,16 +893,17 @@ class whyMehCommand extends Command
 
 class commandsCommand extends Command
 	init: ->
-		@command='/commands'
+		@command='!commands'
 		@parseType='exact'
 		@rankPrivelege='user'
 
 	functionality: ->
 		allowedUserLevels = []
 		user = API.getUser(@msgData.fromID)
-		if user.owner
+		window.capturedUser = user
+		if user.permission > 5
 			allowedUserLevels = ['user','mod','host']
-		else if user.moderator
+		else if user.permission > 2
 			allowedUserLevels = ['user','mod']
 		else
 			allowedUserLevels = ['user']
@@ -922,7 +923,7 @@ class commandsCommand extends Command
 
 class disconnectLookupCommand extends Command
 	init: ->
-		@command='/dclookup'
+		@command='!dclookup'
 		@parseType='startsWith'
 		@rankPrivelege='mod'
 
@@ -969,7 +970,7 @@ class disconnectLookupCommand extends Command
 
 class voteRatioCommand extends Command
 	init: ->
-		@command='/voteratio'
+		@command='!voteratio'
 		@parseType='startsWith'
 		@rankPrivelege='mod'
 
@@ -1002,7 +1003,7 @@ class voteRatioCommand extends Command
 
 class avgVoteRatioCommand extends Command
 	init: ->
-		@command='/avgvoteratio'
+		@command='!avgvoteratio'
 		@parseType='exact'
 		@rankPrivelege='mod'
 
@@ -1145,10 +1146,10 @@ chatUniversals = (chat)->
     beggar(chat)
 
 hook = (apiEvent,callback) ->
-    API.addEventListener(apiEvent,callback)
+    API.on(apiEvent,callback)
 
 unhook = (apiEvent,callback) ->
-    API.removeEventListener(apiEvent,callback)
+    API.off(apiEvent,callback)
 
 apiHooks = [
     {'event':API.ROOM_SCORE_UPDATE, 'callback':updateVotes},

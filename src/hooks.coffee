@@ -1,8 +1,8 @@
 hook = (apiEvent,callback) ->
-    API.addEventListener(apiEvent,callback)
+    API.on(apiEvent,callback)
 
 unhook = (apiEvent,callback) ->
-    API.removeEventListener(apiEvent,callback)
+    API.off(apiEvent,callback)
 
 apiHooks = [
     {'event':API.ROOM_SCORE_UPDATE, 'callback':updateVotes},
