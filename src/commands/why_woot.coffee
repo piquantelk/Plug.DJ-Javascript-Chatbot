@@ -1,6 +1,6 @@
 class whyWootCommand extends Command
 	init: ->
-		@command='/whywoot'
+		@command='!whywoot'
 		@parseType='startsWith'
 		@rankPrivelege='user'
 

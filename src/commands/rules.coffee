@@ -1,6 +1,6 @@
 class rulesCommand extends Command
 	init: ->
-		@command='/rules'
+		@command='!rules'
 		@parseType='startsWith'
 		@rankPrivelege='user'
 

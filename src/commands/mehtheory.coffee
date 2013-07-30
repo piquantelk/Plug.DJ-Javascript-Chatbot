@@ -1,6 +1,6 @@
 class whyMehCommand extends Command
 	init: ->
-		@command='/whymeh'
+		@command='!whymeh'
 		@parseType='exact'
 		@rankPrivelege='user'
 

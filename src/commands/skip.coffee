@@ -1,6 +1,6 @@
 class skipCommand extends Command
 	init: ->
-		@command='/skip'
+		@command='!skip'
 		@parseType='exact'
 		@rankPrivelege='mod'
 

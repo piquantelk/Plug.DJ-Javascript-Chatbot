@@ -1,6 +1,6 @@
 class popCommand extends Command
 	init: ->
-		@command='/pop'
+		@command='!pop'
 		@parseType='exact'
 		@rankPrivelege='mod'
 

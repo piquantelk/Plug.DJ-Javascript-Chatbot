@@ -1,6 +1,6 @@
 class voteRatioCommand extends Command
 	init: ->
-		@command='/voteratio'
+		@command='!voteratio'
 		@parseType='startsWith'
 		@rankPrivelege='mod'
 

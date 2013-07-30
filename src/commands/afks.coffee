@@ -1,6 +1,6 @@
 class afksCommand extends Command
 	init: ->
-		@command='/afks'
+		@command='!afks'
 		@parseType='exact'
 		@rankPrivelege='user'
 

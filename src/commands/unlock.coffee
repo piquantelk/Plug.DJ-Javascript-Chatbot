@@ -1,6 +1,6 @@
 class unlockCommand extends Command
 	init: ->
-		@command='/unlock'
+		@command='!unlock'
 		@parseType='exact'
 		@rankPrivelege='mod'
 

@@ -1,15 +1,16 @@
 class commandsCommand extends Command
 	init: ->
-		@command='/commands'
+		@command='!commands'
 		@parseType='exact'
 		@rankPrivelege='user'
 
 	functionality: ->
 		allowedUserLevels = []
 		user = API.getUser(@msgData.fromID)
-		if user.owner
+		window.capturedUser = user
+		if user.permission > 5
 			allowedUserLevels = ['user','mod','host']
-		else if user.moderator
+		else if user.permission > 2
 			allowedUserLevels = ['user','mod']
 		else
 			allowedUserLevels = ['user']

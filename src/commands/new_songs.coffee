@@ -1,6 +1,6 @@
 class newSongsCommand extends Command
 	init: ->
-		@command='/newsongs'
+		@command='!newsongs'
 		@parseType='startsWith'
 		@rankPrivelege='user'
 

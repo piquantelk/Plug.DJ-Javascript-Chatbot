@@ -1,6 +1,6 @@
 class swapCommand extends Command
 	init: ->
-		@command='/swap'
+		@command='!swap'
 		@parseType='startsWith'
 		@rankPrivelege='mod'
 

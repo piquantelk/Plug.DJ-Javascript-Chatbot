@@ -1,6 +1,6 @@
 class dieCommand extends Command
 	init: ->
-		@command='/die'
+		@command='!die'
 		@parseType='exact'
 		@rankPrivelege='host'
 

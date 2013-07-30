@@ -1,6 +1,6 @@
 class roomHelpCommand extends Command
 	init: ->
-		@command='/roomhelp'
+		@command='!roomhelp'
 		@parseType='startsWith'
 		@rankPrivelege='user'
 

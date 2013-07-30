@@ -1,6 +1,6 @@
 class disconnectLookupCommand extends Command
 	init: ->
-		@command='/dclookup'
+		@command='!dclookup'
 		@parseType='startsWith'
 		@rankPrivelege='mod'
 

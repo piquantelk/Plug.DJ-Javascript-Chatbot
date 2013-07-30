@@ -1,6 +1,6 @@
 class avgVoteRatioCommand extends Command
 	init: ->
-		@command='/avgvoteratio'
+		@command='!avgvoteratio'
 		@parseType='exact'
 		@rankPrivelege='mod'
 

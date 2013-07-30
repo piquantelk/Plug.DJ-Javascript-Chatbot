@@ -1,6 +1,6 @@
 class lockCommand extends Command
 	init: ->
-		@command='/lock'
+		@command='!lock'
 		@parseType='exact'
 		@rankPrivelege='mod'
 

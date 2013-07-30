@@ -1,6 +1,6 @@
 class forceSkipCommand extends Command
 	init: ->
-		@command='/forceskip'
+		@command='!forceskip'
 		@parseType='startsWith'
 		@rankPrivelege='mod'
 

@@ -1,6 +1,6 @@
 class downloadCommand extends Command
 	init: ->
-		@command='/download'
+		@command='!download'
 		@parseType='exact'
 		@rankPrivelege='user'
 

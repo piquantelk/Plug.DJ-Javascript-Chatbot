@@ -1,6 +1,6 @@
 class themeCommand extends Command
 	init: ->
-		@command='/theme'
+		@command='!theme'
 		@parseType='startsWith'
 		@rankPrivelege='user'
 

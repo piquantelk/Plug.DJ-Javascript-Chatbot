@@ -1,6 +1,6 @@
 class resetAfkCommand extends Command
 	init: ->
-		@command='/resetafk'
+		@command='!resetafk'
 		@parseType='startsWith'
 		@rankPrivelege='mod'
 

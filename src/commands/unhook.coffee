@@ -1,6 +1,6 @@
 class unhookCommand extends Command
 	init: ->
-		@command='/unhook events all'
+		@command='!unhook events all'
 		@parseType='exact'
 		@rankPrivelege='host'
 

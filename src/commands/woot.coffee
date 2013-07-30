@@ -1,6 +1,6 @@
 class wootCommand extends Command
 	init: ->
-		@command='/woot'
+		@command='!woot'
 		@parseType='startsWith'
 		@rankPrivelege='user'
 

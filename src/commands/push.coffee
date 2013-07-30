@@ -1,6 +1,6 @@
 class pushCommand extends Command
 	init: ->
-		@command='/push'
+		@command='!push'
 		@parseType='startsWith'
 		@rankPrivelege='mod'
 

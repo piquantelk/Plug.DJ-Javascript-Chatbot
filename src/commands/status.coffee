@@ -1,6 +1,6 @@
 class statusCommand extends Command
 	init: ->
-		@command='/status'
+		@command='!status'
 		@parseType='exact'
 		@rankPrivelege='user'
 
