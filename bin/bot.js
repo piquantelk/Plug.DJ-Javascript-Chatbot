@@ -1085,11 +1085,10 @@
     lockCommand.prototype.init = function() {
       this.command = '!lock';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'manager';
     };
 
     lockCommand.prototype.functionality = function() {
-      API.sendChat('Pop and lock dat ish');
       return data.lockBooth();
     };
 
@@ -1108,11 +1107,10 @@
     unlockCommand.prototype.init = function() {
       this.command = '!unlock';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'bouncer;
     };
 
     unlockCommand.prototype.functionality = function() {
-      API.sendChat('You\'ll never get the key to unlock my heart');
       return data.unlockBooth();
     };
 
