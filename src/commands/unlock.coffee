@@ -5,5 +5,4 @@ class unlockCommand extends Command
 		@rankPrivelege='mod'
 
 	functionality: ->
-		API.sendChat 'You\'ll never get the key to unlock my heart'
 		data.unlockBooth()

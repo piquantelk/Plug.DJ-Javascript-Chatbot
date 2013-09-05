@@ -735,7 +735,6 @@ class lockCommand extends Command
 		@rankPrivelege='mod'
 
 	functionality: ->
-		API.sendChat 'Pop and lock dat ish'
 		data.lockBooth()
 
 
@@ -746,7 +745,6 @@ class unlockCommand extends Command
 		@rankPrivelege='mod'
 
 	functionality: ->
-		API.sendChat 'You\'ll never get the key to unlock my heart'
 		data.unlockBooth()
 
 
