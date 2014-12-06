@@ -341,7 +341,7 @@
   })();
 
   pupOnline = function() {
-    return API.sendChat("Bot Online!");
+    return API.sendChat("Wolfpup Online!");
   };
 
   populateUserData = function() {
